@@ -7,24 +7,25 @@ class ErrorView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            Icons.error_outline,
-            color: Colors.red,
-            size: 45,
-          ),
-          SizedBox(height: 10),
-          Text(
-            "Something went wrong!",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w300,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.error_outline,
+              color: Colors.red,
+              size: 45,
             ),
-          )
-        ],
-      )),
+            SizedBox(height: 10),
+            Text(
+              "Something went wrong!",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w300,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

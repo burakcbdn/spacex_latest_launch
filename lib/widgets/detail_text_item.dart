@@ -29,8 +29,9 @@ class DetailTextItem extends StatelessWidget {
             style: !isStatus
                 ? kDetailTextStyle
                 : kDetailTextStyle.copyWith(
-                    color: status! ? Colors.green : Colors.red),
-          )
+                    color: status! ? Colors.green : Colors.red,
+                  ),
+          ),
         ],
       ),
     );

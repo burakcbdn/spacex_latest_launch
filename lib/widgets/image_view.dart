@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+
+// Creates scrollable image view of the launch images
+// and displays indicator
 class ImageView extends StatefulWidget {
   final List gallery;
   const ImageView({Key? key, required this.gallery}) : super(key: key);
@@ -45,11 +48,15 @@ class _ImageViewState extends State<ImageView> {
                     height: 10,
                     width: 10,
                     decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: isCurrent ? Colors.blue : Colors.white,
-                        border: !isCurrent
-                            ? Border.all(color: Colors.grey.withOpacity(0.5), width: 0.5)
-                            : null),
+                      shape: BoxShape.circle,
+                      color: isCurrent ? Colors.blue : Colors.white,
+                      border: !isCurrent
+                          ? Border.all(
+                              color: Colors.grey.withOpacity(0.5),
+                              width: 0.5,
+                            )
+                          : null,
+                    ),
                   ),
                 );
               }).toList(),
@@ -77,6 +84,9 @@ class _ImageItemState extends State<ImageItem>
     return Image.network(widget.imageURL);
   }
 
+  // When switching page, flutter reloads images, but keeping widget alive prevents this from happening
+  // and once we view image on the page, even if we go next and come back we will not wait for it to load.
+  // switch to [false] for seeing the difference
   @override
   bool get wantKeepAlive => true;
 }

@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+//Platform specific loading indicator
 class CustomLoadingIndicator extends StatelessWidget {
   const CustomLoadingIndicator({Key? key}) : super(key: key);
 

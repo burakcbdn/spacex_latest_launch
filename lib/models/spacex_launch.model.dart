@@ -1,12 +1,21 @@
 import 'package:flutter/rendering.dart';
 
+
+// Model class for SpaceX Launch Data
 class SpaceXLaunch {
+  // id of the launch
   String id;
+  // url of the patch
   String patchURL;
+  // details of the launch
   String details;
+  // name of the launch
   String name;
+  // local date of the launch
   String date;
+  // status of launch [true] => success, [false] => failed
   bool success;
+  // flickr images of launch
   List gallery;
 
   SpaceXLaunch({

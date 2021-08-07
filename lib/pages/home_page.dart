@@ -57,7 +57,12 @@ class _HomePageState extends State<HomePage> {
         elevation: 0,
         actions: [
           IconButton(
-              onPressed: refresh, icon: Icon(Icons.refresh, color: Colors.blue))
+            onPressed: refresh,
+            icon: Icon(
+              Icons.refresh,
+              color: Colors.blue,
+            ),
+          ),
         ],
       ),
       body: Container(
@@ -65,6 +70,8 @@ class _HomePageState extends State<HomePage> {
         child: spaceXLaunch != null
             ? RefreshIndicator(
                 onRefresh: () async {
+                  // refresh page to get new launch data
+                  // Also, can be done by actions on the app bar
                   refresh();
                 },
                 child: SingleChildScrollView(
